@@ -26,7 +26,7 @@ function AuthForm() {
     const endpoint = isLogin ? '/api/auth/login' : '/api/auth/register';
 
     try {
-      const res = await axios.post(`http://localhost:5000${endpoint}`, formData);
+      const res = await axios.post(`https://jobnest-backend-qsn7.onrender.com${endpoint}`, formData);
       setMessage(res.data.message);
       if (isLogin && res.data.token) {
         localStorage.setItem('token', res.data.token);

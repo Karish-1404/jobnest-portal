@@ -16,7 +16,7 @@ function JobDetail() {
   const [applicant, setApplicant] = useState({ name: '', email: '' });
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/jobs/${id}`)
+    axios.get(`https://jobnest-backend-qsn7.onrender.com/api/jobs/${id}`)
       .then(res => setJob(res.data))
       .catch(err => console.error('Error loading job:', err));
   }, [id]);
@@ -46,7 +46,7 @@ function JobDetail() {
     formData.append('jobId', id);
 
     try {
-      await axios.post('http://localhost:5000/api/apply', formData, {
+      await axios.post('https://jobnest-backend-qsn7.onrender.com/api/apply', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': `Bearer ${token}`

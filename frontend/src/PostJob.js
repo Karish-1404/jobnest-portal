@@ -41,7 +41,7 @@ function PostJob() {
     formData.append('description', job.description);
     if (logoFile) formData.append('logo', logoFile);
 
-    axios.post('http://localhost:5000/api/jobs/post', formData, {
+    axios.post('https://jobnest-backend-qsn7.onrender.com/api/jobs/post', formData, {
       headers: {
         Authorization: `Bearer ${token}`,
         'Content-Type': 'multipart/form-data'

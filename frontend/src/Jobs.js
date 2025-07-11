@@ -11,7 +11,7 @@ function Jobs() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/jobs/all')
+    axios.get('https://jobnest-backend-qsn7.onrender.com/api/jobs/all')
       .then(res => setJobs(res.data))
       .catch(err => console.error('Error fetching jobs:', err));
   }, []);

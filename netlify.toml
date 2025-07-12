@@ -3,5 +3,7 @@
   publish = "frontend/build"
   command = "npm run build"
 
-[functions]
-  directory = ""
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

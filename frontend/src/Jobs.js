@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { FaBuilding, FaMapMarkerAlt, FaEye } from 'react-icons/fa';
 import './Jobs.css';
 
 function Jobs() {

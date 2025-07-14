@@ -27,18 +27,17 @@ function Jobs() {
   const uniqueLocations = [...new Set(jobs.map(job => job.location))];
 
   const getPostedDaysAgo = (dateString) => {
-  const posted = new Date(dateString);
-  const today = new Date();
+    const posted = new Date(dateString);
+    const today = new Date();
 
-  posted.setHours(0, 0, 0, 0);
-  today.setHours(0, 0, 0, 0);
+    posted.setHours(0, 0, 0, 0);
+    today.setHours(0, 0, 0, 0);
 
-  const diffTime = today - posted;
-  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    const diffTime = today - posted;
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
-  return diffDays === 0 ? 'Posted today' : `Posted ${diffDays} day(s) ago`;
-};
-
+    return diffDays === 0 ? 'Posted today' : `Posted ${diffDays} day(s) ago`;
+  };
 
   return (
     <div className="job-container">
@@ -73,7 +72,7 @@ function Jobs() {
               <div className="logo-wrapper">
                 {job.logo && (
                   <img
-                    src={`http://localhost:5000/uploads/logo/${job.logo}`}
+                    src={`https://jobnest-backend-qsn7.onrender.com/uploads/${job.logo}`}
                     alt={`${job.company} logo`}
                     className="company-logo"
                   />

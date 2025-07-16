@@ -72,7 +72,7 @@ function Jobs() {
               <div className="logo-wrapper">
                 {job.logo && (
                   <img
-                    src={`https://jobnest-backend-qsn7.onrender.com/uploads/${job.logo}`}
+                    src={job.logo.startsWith('http') ? job.logo : `https://jobnest-backend-qsn7.onrender.com/uploads/${job.logo}`}
                     alt={`${job.company} logo`}
                     className="company-logo"
                   />

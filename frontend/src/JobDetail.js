@@ -92,7 +92,11 @@ function JobDetail() {
         <div className="job-card full-width job-card-flex">
           {job.logo && (
             <img
-              src={`https://jobnest-backend-qsn7.onrender.com/uploads/logo/${job.logo}`}
+              src={
+                job.logo.startsWith('http')
+                  ? job.logo
+                  : `https://jobnest-backend-qsn7.onrender.com/uploads/logo/${job.logo}`
+              }
               alt={`${job.company} logo`}
               className="company-logo"
             />
